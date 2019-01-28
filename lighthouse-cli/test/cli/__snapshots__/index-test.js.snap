@@ -1063,9 +1063,6 @@ Object {
           "path": "meta-elements",
         },
         Object {
-          "path": "dobetterweb/anchors-with-no-rel-noopener",
-        },
-        Object {
           "path": "dobetterweb/appcache",
         },
         Object {
@@ -1091,9 +1088,6 @@ Object {
         },
         Object {
           "path": "seo/font-size",
-        },
-        Object {
-          "path": "seo/crawlable-links",
         },
         Object {
           "path": "seo/hreflang",
