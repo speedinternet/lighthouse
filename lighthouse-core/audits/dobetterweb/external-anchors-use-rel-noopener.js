@@ -34,7 +34,8 @@ class ExternalAnchorsUseRelNoopenerAudit extends Audit {
     const pageHost = new URL(artifacts.URL.finalUrl).host;
     // Filter usages to exclude anchors that are same origin
     const failingAnchors = artifacts.AnchorElements
-      .filter(anchor => !anchor.rel.includes('noopener') && !anchor.rel.includes('noreferrer'))
+      .filter(anchor => anchor.target === '_blank' && !anchor.rel.includes('noopener') &&
+        !anchor.rel.includes('noreferrer'))
       .filter(anchor => {
         try {
           return new URL(anchor.href).host !== pageHost;
