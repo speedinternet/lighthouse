@@ -1054,6 +1054,9 @@ Object {
           "path": "accessibility",
         },
         Object {
+          "path": "anchor-elements",
+        },
+        Object {
           "path": "image-elements",
         },
         Object {

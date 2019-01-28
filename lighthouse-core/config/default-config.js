@@ -91,6 +91,7 @@ const defaultConfig = {
       'runtime-exceptions',
       'chrome-console-messages',
       'accessibility',
+      'anchor-elements',
       'image-elements',
       'link-elements',
       'meta-elements',
