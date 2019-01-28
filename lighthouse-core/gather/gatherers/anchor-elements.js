@@ -15,11 +15,7 @@ class AnchorElements extends Gatherer {
    */
   async afterPass(passContext) {
     const driver = passContext.driver;
-
-    // We'll use evaluateAsync because the `node.getAttribute` method doesn't actually normalize
-    // the values like access from JavaScript does.
-    /** @type {Array<LH.Artifacts.AnchorElement>} */
-    const anchors = await driver.evaluateAsync(`(() => {
+    const expression = `(() => {
       ${pageFunctions.getOuterHTMLSnippetString};
       ${pageFunctions.getElementsInDocumentString};
       const resolveURLOrEmpty = url => {
@@ -33,12 +29,17 @@ class AnchorElements extends Gatherer {
           node.href,
         text: node.href instanceof SVGAnimatedString ?
           node.textContent :
-          node.innerText
+          node.innerText,
         rel: node.rel,
         target: node.target,
         outerHTML: getOuterHTMLSnippet(node),
       }));
-    })()`, {useIsolation: true});
+    })()`
+
+    // We'll use evaluateAsync because the `node.getAttribute` method doesn't actually normalize
+    // the values like access from JavaScript does.
+    /** @type {Array<LH.Artifacts.AnchorElement>} */
+    const anchors = await driver.evaluateAsync(expression, {useIsolation: true});
 
     for (const anchor of anchors) {
       anchor.rel = anchor.rel.toLowerCase();
