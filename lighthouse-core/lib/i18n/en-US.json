@@ -1091,6 +1091,10 @@
     "message": "PWA Optimized",
     "description": "Title of the \"PWA Optimized\" section of the web app category. Within this section are audits that check if the developer has taken advantage of features to make their web page more enjoyable and engaging for the user."
   },
+  "lighthouse-core/config/default-config.js | seoCategoryTitle": {
+    "message": "SEO",
+    "description": "Title of the Search Engine Optimization (SEO) category of audits. Used commonly as the acronym SEO, this term includes all topics related to optimizing a website for indexing by search engines. Also used as a label of a score gauge; try to limit to 20 characters."
+  },
   "lighthouse-core/lib/i18n/i18n.js | columnCacheTTL": {
     "message": "Cache TTL",
     "description": "Label for the TTL column in data tables, entries will be the time to live value of the cache header on a web resource"

@@ -13,6 +13,8 @@ const i18n = require('../lib/i18n/i18n.js');
 const UIStrings = {
   /** Title of the Performance category of audits. Equivalent to 'Web performance', this term is inclusive of all web page speed and loading optimization topics. Also used as a label of a score gauge; try to limit to 20 characters. */
   performanceCategoryTitle: 'Performance',
+  /** Title of the Search Engine Optimization (SEO) category of audits. Used commonly as the acronym SEO, this term includes all topics related to optimizing a website for indexing by search engines. Also used as a label of a score gauge; try to limit to 20 characters. */
+  seoCategoryTitle: 'SEO',
   /** Title of the speed metrics section of the Performance category. Within this section are various speed metrics which quantify the pageload performance into values presented in seconds and milliseconds. */
   metricGroupTitle: 'Metrics',
   /** Title of the opportunity section of the Performance category. Within this section are audits with imperative titles that suggest actions the user can take to improve the loading performance of their web page. 'Suggestion'/'Optimization'/'Recommendation' are reasonable synonyms for 'opportunity' in this case. */
@@ -432,7 +434,7 @@ const defaultConfig = {
       ],
     },
     'seo': {
-      title: 'SEO',
+      title: str_(UIStrings.seoCategoryTitle),
       description: 'These checks ensure that your page is optimized for search engine results ranking. ' +
           'There are additional factors Lighthouse does not check that may affect your search ranking. ' +
           '[Learn more](https://support.google.com/webmasters/answer/35769).',

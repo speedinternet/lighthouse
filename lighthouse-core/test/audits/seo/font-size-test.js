@@ -26,7 +26,8 @@ describe('SEO: Font size audit', () => {
     const auditResult = FontSizeAudit.audit(artifacts);
     assert.equal(auditResult.rawValue, false);
     expect(auditResult.explanation)
-      .toBeDisplayString('Text is illegible because of a missing viewport config');
+      .toBeDisplayString('Text is illegible because there\'s ' +
+        'no viewport meta tag optimized for mobile screens.');
   });
 
   it('fails when less than 60% of text is legible', () => {

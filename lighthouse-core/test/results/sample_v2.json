@@ -5062,6 +5062,9 @@
       "lighthouse-core/config/default-config.js | performanceCategoryTitle": [
         "categories.performance.title"
       ],
+      "lighthouse-core/config/default-config.js | seoCategoryTitle": [
+        "categories.seo.title"
+      ],
       "lighthouse-core/config/default-config.js | metricGroupTitle": [
         "categoryGroups.metrics.title"
       ],
