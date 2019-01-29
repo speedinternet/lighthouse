@@ -81,7 +81,7 @@ class IsCrawlable extends Audit {
       title: str_(UIStrings.title),
       failureTitle: str_(UIStrings.failureTitle),
       description: str_(UIStrings.description),
-      requiredArtifacts: ['MetaRobots', 'RobotsTxt', 'URL'],
+      requiredArtifacts: ['MetaElements', 'RobotsTxt', 'URL'],
     };
   }
 
@@ -92,20 +92,22 @@ class IsCrawlable extends Audit {
    */
   static audit(artifacts, context) {
     const devtoolsLog = artifacts.devtoolsLogs[Audit.DEFAULT_PASS];
+    const metaRobots = artifacts.MetaElements.find(meta => meta.name === 'robots');
 
     return MainResource.request({devtoolsLog, URL: artifacts.URL}, context)
       .then(mainResource => {
         /** @type {Array<Object<string, LH.Audit.DetailsItem>>} */
         const blockingDirectives = [];
 
-        if (artifacts.MetaRobots) {
-          const isBlocking = hasBlockingDirective(artifacts.MetaRobots);
+        if (metaRobots) {
+          const metaRobotsContent = metaRobots.content || '';
+          const isBlocking = hasBlockingDirective(metaRobotsContent);
 
           if (isBlocking) {
             blockingDirectives.push({
               source: {
                 type: /** @type {'node'} */ ('node'),
-                snippet: `<meta name="robots" content="${artifacts.MetaRobots}" />`,
+                snippet: `<meta name="robots" content="${metaRobotsContent}" />`,
               },
             });
           }

@@ -23,7 +23,8 @@ const UIStrings = {
   /** [ICU Syntax] Label for the audit identifying font sizes that are too small. */
   displayValue: '{decimalProportion, number, extendedPercent} legible text',
   /** Explanatory message stating that there was a failure in an audit caused by a missing page viewport meta tag configuration. */
-  explanationViewport: 'Text is illegible because of a missing viewport config',
+  explanationViewport: 'Text is illegible because there\'s no viewport meta tag optimized ' +
+    'for mobile screens.',
   /** Explanatory message stating that there was a failure in an audit caused by a certain percentage of the text on the page being too small. */
   explanation: '{decimalProportion, number, extendedPercent} of text is too small.',
   /** Explanatory message stating that there was a failure in an audit caused by a certain percentage of the text on the page being too small, based on a sample size of text that was less than 100% of the text on the page. */
@@ -206,7 +207,7 @@ class FontSize extends Audit {
       title: str_(UIStrings.title),
       failureTitle: str_(UIStrings.failureTitle),
       description: str_(UIStrings.description),
-      requiredArtifacts: ['FontSize', 'URL', 'Viewport'],
+      requiredArtifacts: ['FontSize', 'URL', 'MetaElements'],
     };
   }
 

@@ -33,7 +33,7 @@ class Description extends Audit {
       title: str_(UIStrings.title),
       failureTitle: str_(UIStrings.failureTitle),
       description: str_(UIStrings.description),
-      requiredArtifacts: ['MetaDescription'],
+      requiredArtifacts: ['MetaElements'],
     };
   }
 
@@ -42,13 +42,15 @@ class Description extends Audit {
    * @return {LH.Audit.Product}
    */
   static audit(artifacts) {
-    if (artifacts.MetaDescription === null) {
+    const metaDescription = artifacts.MetaElements.find(meta => meta.name === 'description');
+    if (!metaDescription) {
       return {
         rawValue: false,
       };
     }
 
-    if (artifacts.MetaDescription.trim().length === 0) {
+    const description = metaDescription.content || '';
+    if (description.trim().length === 0) {
       return {
         rawValue: false,
         explanation: str_(UIStrings.explanation),
