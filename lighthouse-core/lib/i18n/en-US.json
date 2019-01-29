@@ -1091,6 +1091,10 @@
     "message": "PWA Optimized",
     "description": "Title of the \"PWA Optimized\" section of the web app category. Within this section are audits that check if the developer has taken advantage of features to make their web page more enjoyable and engaging for the user."
   },
+  "lighthouse-core/config/default-config.js | seoCategoryDescription": {
+    "message": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Lighthouse does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
+    "description": "Description of the Search Engine Optimization (SEO) category. This is displayed immediately under the SEO title element. No character length limits. 'Learn More' becomes link text to additional documentation."
+  },
   "lighthouse-core/config/default-config.js | seoCategoryTitle": {
     "message": "SEO",
     "description": "Title of the Search Engine Optimization (SEO) category of audits. Used commonly as the acronym SEO, this term includes all topics related to optimizing a website for indexing by search engines. Also used as a label of a score gauge; try to limit to 20 characters."

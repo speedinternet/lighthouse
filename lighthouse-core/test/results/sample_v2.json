@@ -5065,6 +5065,9 @@
       "lighthouse-core/config/default-config.js | seoCategoryTitle": [
         "categories.seo.title"
       ],
+      "lighthouse-core/config/default-config.js | seoCategoryDescription": [
+        "categories.seo.description"
+      ],
       "lighthouse-core/config/default-config.js | metricGroupTitle": [
         "categoryGroups.metrics.title"
       ],

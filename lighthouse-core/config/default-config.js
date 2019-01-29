@@ -13,8 +13,6 @@ const i18n = require('../lib/i18n/i18n.js');
 const UIStrings = {
   /** Title of the Performance category of audits. Equivalent to 'Web performance', this term is inclusive of all web page speed and loading optimization topics. Also used as a label of a score gauge; try to limit to 20 characters. */
   performanceCategoryTitle: 'Performance',
-  /** Title of the Search Engine Optimization (SEO) category of audits. Used commonly as the acronym SEO, this term includes all topics related to optimizing a website for indexing by search engines. Also used as a label of a score gauge; try to limit to 20 characters. */
-  seoCategoryTitle: 'SEO',
   /** Title of the speed metrics section of the Performance category. Within this section are various speed metrics which quantify the pageload performance into values presented in seconds and milliseconds. */
   metricGroupTitle: 'Metrics',
   /** Title of the opportunity section of the Performance category. Within this section are audits with imperative titles that suggest actions the user can take to improve the loading performance of their web page. 'Suggestion'/'Optimization'/'Recommendation' are reasonable synonyms for 'opportunity' in this case. */
@@ -65,6 +63,12 @@ const UIStrings = {
   a11yMetaGroupTitle: 'Meta Tags Used Properly',
   /* Description of the meta tag section within the Accessibility category. Within this section are audits with descriptive titles that highlight if meta tags on the page have been used properly and if any important ones are missing. */
   a11yMetaGroupDescription: 'These are opportunities to improve the user experience of your site.',
+  /** Title of the Search Engine Optimization (SEO) category of audits. Used commonly as the acronym SEO, this term includes all topics related to optimizing a website for indexing by search engines. Also used as a label of a score gauge; try to limit to 20 characters. */
+  seoCategoryTitle: 'SEO',
+  /** Description of the Search Engine Optimization (SEO) category. This is displayed immediately under the SEO title element. No character length limits. 'Learn More' becomes link text to additional documentation. */
+  seoCategoryDescription: 'These checks ensure that your page is optimized for search engine results ranking. ' +
+  'There are additional factors Lighthouse does not check that may affect your search ranking. ' +
+  '[Learn more](https://support.google.com/webmasters/answer/35769).',
   /** Title of the Fast and Reliable section of the web app category. Within this section are audits that check if the web site loaded quickly and can reliably load even if the internet connection is very slow or goes offline. */
   pwaFastReliableGroupTitle: 'Fast and reliable',
   /** Title of the Installable section of the web app category. Within this section are audits that check if Chrome supports installing the web site as an app on their device. */
@@ -435,9 +439,7 @@ const defaultConfig = {
     },
     'seo': {
       title: str_(UIStrings.seoCategoryTitle),
-      description: 'These checks ensure that your page is optimized for search engine results ranking. ' +
-          'There are additional factors Lighthouse does not check that may affect your search ranking. ' +
-          '[Learn more](https://support.google.com/webmasters/answer/35769).',
+      description: str_(UIStrings.seoCategoryDescription),
       manualDescription: 'Run these additional validators on your site to check additional SEO best practices.',
       auditRefs: [
         {id: 'viewport', weight: 1, group: 'seo-mobile'},
