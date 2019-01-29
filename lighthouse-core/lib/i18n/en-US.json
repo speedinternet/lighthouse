@@ -1095,6 +1095,10 @@
     "message": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Lighthouse does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
     "description": "Description of the Search Engine Optimization (SEO) category. This is displayed immediately under the SEO title element. No character length limits. 'Learn More' becomes link text to additional documentation."
   },
+  "lighthouse-core/config/default-config.js | seoCategoryManualDescription": {
+    "message": "Run these additional validators on your site to check additional SEO best practices.",
+    "description": "Description of the Search Engine Optimization (SEO) manual checks category, the additional validators must be run by hand in order to check all SEO best practices. This is displayed above the manual checks section of the SEO category. No character length limits."
+  },
   "lighthouse-core/config/default-config.js | seoCategoryTitle": {
     "message": "SEO",
     "description": "Title of the Search Engine Optimization (SEO) category of audits. Used commonly as the acronym SEO, this term includes all topics related to optimizing a website for indexing by search engines. Also used as a label of a score gauge; try to limit to 20 characters."

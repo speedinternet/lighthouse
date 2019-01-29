@@ -69,6 +69,8 @@ const UIStrings = {
   seoCategoryDescription: 'These checks ensure that your page is optimized for search engine results ranking. ' +
   'There are additional factors Lighthouse does not check that may affect your search ranking. ' +
   '[Learn more](https://support.google.com/webmasters/answer/35769).',
+  /** Description of the Search Engine Optimization (SEO) manual checks category, the additional validators must be run by hand in order to check all SEO best practices. This is displayed above the manual checks section of the SEO category. No character length limits. */
+  seoCategoryManualDescription: 'Run these additional validators on your site to check additional SEO best practices.',
   /** Title of the Fast and Reliable section of the web app category. Within this section are audits that check if the web site loaded quickly and can reliably load even if the internet connection is very slow or goes offline. */
   pwaFastReliableGroupTitle: 'Fast and reliable',
   /** Title of the Installable section of the web app category. Within this section are audits that check if Chrome supports installing the web site as an app on their device. */
@@ -440,7 +442,7 @@ const defaultConfig = {
     'seo': {
       title: str_(UIStrings.seoCategoryTitle),
       description: str_(UIStrings.seoCategoryDescription),
-      manualDescription: 'Run these additional validators on your site to check additional SEO best practices.',
+      manualDescription: str_(UIStrings.seoCategoryManualDescription),
       auditRefs: [
         {id: 'viewport', weight: 1, group: 'seo-mobile'},
         {id: 'document-title', weight: 1, group: 'seo-content'},
