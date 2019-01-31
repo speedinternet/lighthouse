@@ -202,6 +202,15 @@
       "rawValue": 16,
       "displayValue": "20 ms"
     },
+    "max-potential-fid": {
+      "id": "max-potential-fid",
+      "title": "Max Potential FID",
+      "description": "The potential First Input Delay that your users could experience is the duration, in milliseconds, of the longest task.",
+      "score": 0.92,
+      "scoreDisplayMode": "numeric",
+      "rawValue": 122.537,
+      "displayValue": "120 ms"
+    },
     "errors-in-console": {
       "id": "errors-in-console",
       "title": "Browser errors were logged to the console",
@@ -822,6 +831,13 @@
             "text": "Transfer Size"
           },
           {
+            "key": "resourceSize",
+            "itemType": "bytes",
+            "displayUnit": "kb",
+            "granularity": 1,
+            "text": "Resource Size"
+          },
+          {
             "key": "statusCode",
             "itemType": "text",
             "text": "Status Code"
@@ -843,6 +859,7 @@
             "startTime": 0,
             "endTime": 640.1550000009593,
             "transferSize": 12640,
+            "resourceSize": 12519,
             "statusCode": 200,
             "mimeType": "text/html",
             "resourceType": "Document"
@@ -852,6 +869,7 @@
             "startTime": 630.2950000099372,
             "endTime": 2635.035000013886,
             "transferSize": 821,
+            "resourceSize": 677,
             "statusCode": 200,
             "mimeType": "text/css",
             "resourceType": "Stylesheet"
@@ -861,6 +879,7 @@
             "startTime": 635.496000002604,
             "endTime": 1204.6590000099968,
             "transferSize": 821,
+            "resourceSize": 677,
             "statusCode": 200,
             "mimeType": "text/css",
             "resourceType": "Stylesheet"
@@ -870,6 +889,7 @@
             "startTime": 636.6400000115391,
             "endTime": 1213.2910000218544,
             "transferSize": 139,
+            "resourceSize": 0,
             "statusCode": 404,
             "mimeType": "text/css",
             "resourceType": "Stylesheet"
@@ -879,6 +899,7 @@
             "startTime": 638.0040000076406,
             "endTime": 2849.3670000170823,
             "transferSize": 821,
+            "resourceSize": 677,
             "statusCode": 200,
             "mimeType": "text/css",
             "resourceType": "Stylesheet"
@@ -888,6 +909,7 @@
             "startTime": 638.7899999972433,
             "endTime": 1220.04100002232,
             "transferSize": 1108,
+            "resourceSize": 964,
             "statusCode": 200,
             "mimeType": "text/css",
             "resourceType": "Stylesheet"
@@ -897,6 +919,7 @@
             "startTime": 640.5979999981355,
             "endTime": 1228.5180000180844,
             "transferSize": 736,
+            "resourceSize": 616,
             "statusCode": 200,
             "mimeType": "text/html",
             "resourceType": "Document"
@@ -906,6 +929,7 @@
             "startTime": 641.3450000109151,
             "endTime": 1776.4320000133011,
             "transferSize": 733,
+            "resourceSize": 613,
             "statusCode": 200,
             "mimeType": "text/html",
             "resourceType": "Document"
@@ -915,6 +939,7 @@
             "startTime": 642.8679999953602,
             "endTime": 4216.161000018474,
             "transferSize": 821,
+            "resourceSize": 677,
             "statusCode": 200,
             "mimeType": "text/css",
             "resourceType": "Stylesheet"
@@ -924,6 +949,7 @@
             "startTime": 644.0820000134408,
             "endTime": 1792.0860000012908,
             "transferSize": 1703,
+            "resourceSize": 1552,
             "statusCode": 200,
             "mimeType": "text/javascript",
             "resourceType": "Script"
@@ -933,6 +959,7 @@
             "startTime": 645.529000001261,
             "endTime": 1236.1859999946319,
             "transferSize": 144,
+            "resourceSize": 0,
             "statusCode": 200,
             "mimeType": "text/javascript",
             "resourceType": "Script"
@@ -942,6 +969,7 @@
             "startTime": 3951.6250000160653,
             "endTime": 4779.641000000993,
             "transferSize": 24741,
+            "resourceSize": 24620,
             "statusCode": 200,
             "mimeType": "image/jpeg",
             "resourceType": "Image"
@@ -951,6 +979,7 @@
             "startTime": 2849.7340000176337,
             "endTime": 3961.049000005005,
             "transferSize": 71654,
+            "resourceSize": 71501,
             "statusCode": 200,
             "mimeType": "text/javascript",
             "resourceType": "Script"
@@ -960,6 +989,7 @@
             "startTime": 3874.7540000185836,
             "endTime": 4796.288000012282,
             "transferSize": 30174,
+            "resourceSize": 84245,
             "statusCode": 200,
             "mimeType": "text/javascript",
             "resourceType": "Script"
@@ -969,6 +999,7 @@
             "startTime": 2924.34100000537,
             "endTime": 3964.233000006061,
             "transferSize": 821,
+            "resourceSize": 677,
             "statusCode": 200,
             "mimeType": "text/css",
             "resourceType": "Stylesheet"
@@ -978,6 +1009,7 @@
             "startTime": 3066.252999997232,
             "endTime": 3772.7560000203084,
             "transferSize": 12640,
+            "resourceSize": 12519,
             "statusCode": 200,
             "mimeType": "text/html",
             "resourceType": "XHR"
@@ -987,6 +1019,7 @@
             "startTime": 3829.6360000094865,
             "endTime": 3968.59800000675,
             "transferSize": 0,
+            "resourceSize": 4,
             "statusCode": 200,
             "mimeType": "text/plain",
             "resourceType": "Image"
@@ -996,6 +1029,7 @@
             "startTime": 4967.373000021325,
             "endTime": 5536.498000001302,
             "transferSize": 221,
+            "resourceSize": 95,
             "statusCode": 404,
             "mimeType": "text/plain",
             "resourceType": "Other"
@@ -2844,6 +2878,10 @@
           "group": "metrics"
         },
         {
+          "id": "max-potential-fid",
+          "weight": 0
+        },
+        {
           "id": "render-blocking-resources",
           "weight": 0,
           "group": "load-opportunities"
@@ -3653,6 +3691,18 @@
       {
         "startTime": 0,
         "name": "lh:computed:EstimatedInputLatency",
+        "duration": 100,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 0,
+        "name": "lh:audit:max-potential-fid",
+        "duration": 100,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 0,
+        "name": "lh:computed:MaxPotentialFID",
         "duration": 100,
         "entryType": "measure"
       },
@@ -4492,7 +4542,19 @@
             "timeInMs": 16
           },
           "path": "audits[estimated-input-latency].displayValue"
+        },
+        {
+          "values": {
+            "timeInMs": 122.537
+          },
+          "path": "audits[max-potential-fid].displayValue"
         }
+      ],
+      "lighthouse-core/audits/metrics/max-potential-fid.js | title": [
+        "audits[max-potential-fid].title"
+      ],
+      "lighthouse-core/audits/metrics/max-potential-fid.js | description": [
+        "audits[max-potential-fid].description"
       ],
       "lighthouse-core/audits/time-to-first-byte.js | title": [
         "audits[time-to-first-byte].title"
@@ -5061,6 +5123,15 @@
       ],
       "lighthouse-core/config/default-config.js | performanceCategoryTitle": [
         "categories.performance.title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yCategoryTitle": [
+        "categories.accessibility.title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yCategoryDescription": [
+        "categories.accessibility.description"
+      ],
+      "lighthouse-core/config/default-config.js | a11yCategoryManualDescription": [
+        "categories.accessibility.manualDescription"
       ],
       "lighthouse-core/config/default-config.js | seoCategoryTitle": [
         "categories.seo.title"

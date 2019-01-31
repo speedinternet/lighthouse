@@ -43,6 +43,9 @@ Object {
       "path": "metrics/estimated-input-latency",
     },
     Object {
+      "path": "metrics/max-potential-fid",
+    },
+    Object {
       "path": "errors-in-console",
     },
     Object {
@@ -685,6 +688,10 @@ Object {
           "weight": 0,
         },
         Object {
+          "id": "max-potential-fid",
+          "weight": 0,
+        },
+        Object {
           "group": "load-opportunities",
           "id": "render-blocking-resources",
           "weight": 0,
@@ -1048,9 +1055,6 @@ Object {
         },
         Object {
           "path": "viewport-dimensions",
-        },
-        Object {
-          "path": "manifest",
         },
         Object {
           "path": "runtime-exceptions",
